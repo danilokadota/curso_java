@@ -5,7 +5,8 @@ public class Teste {
 	public static void main(String[] args) {
 		Funcionario f1 = new Funcionario();
 	
-		f1.setNome("kadota");
+		f1.setNome("Danilo");
+		f1.setSobreNome("Kadota");
 		f1.setDepartamento("backend");
 		f1.setSalario(1500);
 		f1.setDataDeEntrada("26/07/2013");
@@ -16,7 +17,8 @@ public class Teste {
 		
 		Funcionario f2 = new Funcionario();
 		
-		f2.setNome("danilo");
+		f2.setNome("Ana");
+		f2.setSobreNome("Almeida");
 		f2.setDepartamento("frontend");
 		f2.setSalario(1500);
 		f2.setDataDeEntrada("26/07/2013");
@@ -30,7 +32,9 @@ public class Teste {
 		empresa.adiciona(f1);
 		empresa.adiciona(f2);
 		empresa.mostraEmpregados();
-
+			
+		System.out.println("Bonificação: " + f1.getNome() +" " + f1.getSobreNome() + " "+ f1.getBonificacao());
+		
 	}
-
+	
 }

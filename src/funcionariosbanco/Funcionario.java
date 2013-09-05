@@ -6,7 +6,14 @@ public class Funcionario {
 		private double salario;
 		private String dataDeEntrada;
 		private String rg;
+		private String sobreNome;
 		
+		public String getSobreNome() {
+			return sobreNome;
+		}
+		public void setSobreNome(String sobreNome) {
+			this.sobreNome = sobreNome;
+		}
 		public String getNome() {
 			return nome;
 		}
@@ -45,12 +52,16 @@ public class Funcionario {
 		}
 		void main(){
 			System.out.println("Nome: " + this.nome);
+			System.out.println("Sobre nome: " + this.sobreNome);
 			System.out.println("Departamento: "+ this.departamento);
 			System.out.println("Salario: "+ this.salario);
 			System.out.println("Data de entrada: "+ this.dataDeEntrada);
 			System.out.println("RG: " + this.rg);
 			System.out.println("Ganho anual: " + calculaGanhoAnual());
 			
+		}
+		public double getBonificacao(){
+			return this.salario * 0.10;
 		}
 	}
 	
