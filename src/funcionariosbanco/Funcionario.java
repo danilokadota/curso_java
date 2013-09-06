@@ -1,6 +1,6 @@
 package funcionariosbanco;
 
-public class Funcionario {
+abstract class Funcionario {
 		private String nome;
 		private String departamento;
 		private double salario;
@@ -50,7 +50,7 @@ public class Funcionario {
 		double calculaGanhoAnual(){
 			return salario*12;
 		}
-		void main(){
+		void mostrar(){
 			System.out.println("Nome: " + this.nome);
 			System.out.println("Sobre nome: " + this.sobreNome);
 			System.out.println("Departamento: "+ this.departamento);

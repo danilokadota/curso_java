@@ -12,7 +12,7 @@ public class Empresa {
 	void mostraEmpregados(){
 		for (int i = 0; i < this.empregados.length; i++) {
 			System.out.println("Funcionario na posição: " + i );
-			empregados[i].main();
+			empregados[i].mostrar();
 		}
 	}
 }

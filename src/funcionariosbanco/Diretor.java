@@ -1,16 +1,12 @@
 package funcionariosbanco;
 
-public class Gerente extends Funcionario implements Autenticavel {
-	int numeroDeFuncionariosGerenciados;
+public class Diretor extends Funcionario implements Autenticavel {
 	private int senha;
-	@Override
-	public double getBonificacao(){
-		return super.getBonificacao() + 500;
-	}
+
 	public int getSenha() {
 		return senha;
 	}
-	
+
 	public void setSenha(int senha) {
 		this.senha = senha;
 	}

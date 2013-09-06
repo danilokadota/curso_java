@@ -3,7 +3,7 @@ package funcionariosbanco;
 public class Teste {
 
 	public static void main(String[] args) {
-		Funcionario f1 = new Funcionario();
+		Empregados f1 = new Empregados();
 	
 		f1.setNome("Danilo");
 		f1.setSobreNome("Kadota");
@@ -15,7 +15,7 @@ public class Teste {
 		f1.recebeAumento(500);
 		
 		
-		Funcionario f2 = new Funcionario();
+		Empregados f2 = new Empregados();
 		
 		f2.setNome("Ana");
 		f2.setSobreNome("Almeida");
@@ -34,7 +34,23 @@ public class Teste {
 		empresa.mostraEmpregados();
 			
 		System.out.println("Bonificação: " + f1.getNome() +" " + f1.getSobreNome() + " "+ f1.getBonificacao());
-		
-	}
+		 
+
+			Gerente gerente1 = new Gerente();
+			gerente1.setNome("danilo kadota");
+			gerente1.setSenha(120303);
+			gerente1.setSalario(5000);
+			
+			System.out.println("Bonificação: " + gerente1.getBonificacao() + " de " + gerente1.getSalario());
+			
+			Gerente g = new Gerente();
+			g.setNome("marcus");
+			
+			Empregados e = new Empregados();
+			e.setNome("marcus");
+			
+			System.out.println(g.getNome() + " // " + e.getNome());
+		}
+	
 	
 }
