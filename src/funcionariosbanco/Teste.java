@@ -50,7 +50,19 @@ public class Teste {
 			e.setNome("marcus");
 			
 			System.out.println(g.getNome() + " // " + e.getNome());
-		}
+			
+			
+			Conta cc = new ContaCorrente();
+			cc.deposita(100);
+			
+			try{
+				cc.saca(100);
+			}catch (IllegalArgumentException r) {
+				System.out.println(r.getMessage());
+			}
+			
+
 	
-	
+	}		
+		
 }

@@ -7,4 +7,6 @@ public class Empregados extends Funcionario {
 		String nome = super.getNome() + " Empregado";
 		return nome;
 	}
+
+
 }

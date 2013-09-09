@@ -1,26 +1,31 @@
 package funcionariosbanco;
 
 
-public class Conta {
-	int numero = 1234;
-	String dono = "Danilo";
-	String cpf = "123.456.789-10";
-	double saldo = 1000;
-	double limite = 1000;
+public  class Conta {
+	int numero;
+	String dono;
+	String cpf ;
+	double saldo;
+	double limite;
 	double salario;
 	
-	public void deposita(double quantidade){
-		this.saldo += quantidade;
-	}
-	boolean  saca(double quantidade){
-		if (quantidade > this.saldo + this.limite) {
-			System.out.println("Não posso sacar fora do limite! ");
-			return false;
+	
+	
+	public void deposita(double valor){
+		if (valor < 0) {
+			throw new ValorInvalidoException(valor);
 		} else {
-			this.saldo = this.saldo - quantidade;
-			return true;
+
+		this.saldo += valor - 0.10;
 		}
 	}
+	void saca(double valor){
+		if (this.saldo < valor) {
+		throw new SaldoInsuficienteException("saldo insuficiente" + "tente um valor menor");
+	} else {
+		this.saldo -= valor;
+	}
+}
 	public double getSaldo(){
 		return this.saldo;
 	}

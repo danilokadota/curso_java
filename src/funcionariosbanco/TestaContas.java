@@ -20,14 +20,6 @@ public class TestaContas {
 		System.out.println(cc.getSaldo());
 		System.out.println(cp.getSaldo());
 		
-		Conta minhaConta = new Conta();
-		minhaConta.deposita(100);
-		minhaConta.setLimite(100);
-		minhaConta.saca(100);
-		if (!minhaConta.saca(1000)) {
-			System.out.println("Não Saquei");
-		}
-		
 	}
 
 }
