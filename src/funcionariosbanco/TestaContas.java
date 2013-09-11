@@ -20,6 +20,9 @@ public class TestaContas {
 		System.out.println(cc.getSaldo());
 		System.out.println(cp.getSaldo());
 		
+		
+		Conta conta = new Conta();
+		conta.saca(200);
 	}
 
 }

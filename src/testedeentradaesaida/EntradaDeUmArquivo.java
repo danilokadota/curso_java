@@ -13,6 +13,7 @@ public class EntradaDeUmArquivo {
 		InputStream is = System.in;
 		
 		
+		@SuppressWarnings("resource")
 		Scanner entrada = new Scanner(is);
 		
 		OutputStream os = System.out;

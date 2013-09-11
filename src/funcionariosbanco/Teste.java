@@ -1,5 +1,9 @@
 package funcionariosbanco;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
+
 public class Teste {
 
 	public static void main(String[] args) {
@@ -51,18 +55,30 @@ public class Teste {
 			
 			System.out.println(g.getNome() + " // " + e.getNome());
 			
+			Set<String> conjunto = new HashSet<>();
+			conjunto.add("item1");
+			conjunto.add("item2");
+			conjunto.add("item3");
 			
-			Conta cc = new ContaCorrente();
-			cc.deposita(100);
-			
-			try{
-				cc.saca(100);
-			}catch (IllegalArgumentException r) {
-				System.out.println(r.getMessage());
+			java.util.Iterator <String> i = conjunto.iterator();
+			while (i.hasNext()){
+				String palavra = i.next();
+				System.out.println(palavra);
 			}
 			
+			ContaCorrente c1 = new ContaCorrente();
+			c1.deposita(1000);
+			
+			ContaCorrente c2 = new ContaCorrente();
+			c2.deposita(3000);
 
-	
+			HashMap<String,ContaCorrente> mapaDeContas = new HashMap<>();
+			
+			mapaDeContas.put("diretor",c1);
+			mapaDeContas.put("gerente", c2);
+			
+			ContaCorrente contaDoDiretor = mapaDeContas.get("diretor");
+			System.out.println(contaDoDiretor.getSaldo());
 	}		
 		
 }
